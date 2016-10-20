@@ -4,7 +4,6 @@ library(stringr)
 library(Rcompression)
 library(gtools)
 
-
 main = function()
 {
   name = readline("Manga Name \n")
