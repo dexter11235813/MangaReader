@@ -4,6 +4,8 @@ library(stringr)
 library(Rcompression)
 library(gtools)
 
+#Driver Function 
+
 main = function()
 {
   name = readline("Manga Name \n")
@@ -29,7 +31,7 @@ manga.name = function(name)
 
 
 
-# Adjust page numbers
+# Adjust page numbers for compression
 adjusted.page.no = function(i)
 {
   if(i %in% 1:9)
@@ -48,6 +50,9 @@ adjusted.page.no = function(i)
   
 }
 }
+
+# Main download function 
+
 manga.download = function(name,chapter)
 {
   temp = name
@@ -87,6 +92,8 @@ manga.download = function(name,chapter)
     
     download.file(img,paste0(pageno,".jpg"))
   }
+  # using the zip function in the Rcompression package, as the one in utils does not 
+  # order the images in order. 
   wordict = getwd()
   prefix = substring(wordict,17,)
   list.of.files = list.files()
