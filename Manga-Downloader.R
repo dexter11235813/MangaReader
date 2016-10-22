@@ -99,7 +99,7 @@ manga.download = function(name,chapter)
   prefix = substring(wordict,17,)
   list.of.files = list.files()
   path.for.compression = unlist(lapply(list.of.files,function(x) return(paste0("~/",prefix,"/",x))))
-  Rcompression::zip(paste(c(manga.name(temp),paste(c("Chapter-",chapter_name),collapse =""),".cbz"),collapse = ""),path.for.compression)
+  Rcompression::zip(paste(c(manga.name(temp),"-",paste(c("Chapter-",chapter_name),collapse =""),".cbz"),collapse = ""),path.for.compression)
   }
 
 }
