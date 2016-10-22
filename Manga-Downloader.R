@@ -73,7 +73,8 @@ manga.download = function(name,chapter)
   print(download_loc)
   if(file.exists(download_loc)) 
     {
-    stop('The chapter already exists')
+    cat('The chapter already exists \n')
+    return()
   }else
   {
     dir.create(paste(c("Chapter-",chapter_name),collapse = ""))
