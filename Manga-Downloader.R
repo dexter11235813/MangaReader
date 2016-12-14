@@ -94,7 +94,7 @@ manga.download = function(name,chapter)
     download.file(img,paste0(pageno,".jpg"))
   }
   # using the zip function in the Rcompression package, as the one in utils does not 
-  # order the images in order. 
+  # arrange the images in order. 
   wordict = getwd()
   prefix = substring(wordict,17,)
   list.of.files = list.files()
